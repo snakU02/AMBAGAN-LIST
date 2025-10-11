@@ -1,0 +1,182 @@
+body {
+    background-color: #fffffe;
+    font-family: arial;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0;
+}
+
+h1 p {
+    display: inline-block;
+    color: #ffd803;
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272343;
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 80px;
+}
+
+.container-border-list {
+    display: flex;
+    column-gap: 60px;
+}
+
+.ambagan-border {
+    margin-left: 10px;
+    align-self: flex-start;
+    /*//align-self: flex-start; - This only works if the parent container has display: flex; 
+    //In short use this to work containers independently.
+    align-self - means
+    each box inside a flex container can choose its own position —
+    like deciding where it wants to sit (top, center, or bottom).
+    
+    flex-start means:
+    “Start from the beginning of the container.”
+
+    In flexbox:
+    The “start” depends on the direction of your flex container.
+
+    If your container is a row (left to right, default):
+    flex-start = left side
+    flex-end = right side
+
+    If your container is a column (top to bottom):
+    flex-start = top
+    flex-end = bottom
+
+    */
+}
+
+.budget-border {
+    align-self: flex-start;
+}
+
+.ambagan-border,
+.budget-border {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.18);
+    width: 600px;
+    border-radius: 5px;
+}
+
+.grid-list {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 7px;
+    justify-content: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid grey;
+    height: 45px;
+}
+
+.input {
+    width: 150px;
+    height: 30px;
+    outline: none;
+}
+
+.addBtn {
+    width: 100px;
+    height: 35px;
+    background-color: #ffd803;
+    color: #272343;
+    border: none;
+    border-radius: 3px;
+}
+
+.addBtn:hover {
+    background-color: hsl(51, 100%, 49%);
+}
+
+.input,
+.addBtn {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+.resultsAmbagan {
+    color: #2d334a;
+    display: grid;
+    grid-template-columns: 162px 157px 153px 100px;
+    column-gap: 6px;
+    margin-left: 5px;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.resultsAmbagan div {
+    padding: 10px 0px;
+}
+
+
+
+.deleteBtn {
+    padding: 8px 10px;
+    background-color: rgb(173, 24, 24);
+    color: #e3f6f5;
+    border: none;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+.deleteBtnDiv img {
+    height: 20px;
+}
+
+
+.listName {
+    overflow-wrap: break-word;
+}
+
+
+.flex-two-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.second-container {
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+
+h2 {
+    margin: 0px 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.second-container div {
+    width: 100px;
+
+}
+
+.resultAmount {
+    font-size: 30px;
+}
+
+.budgetAndTotalCost {
+    display: flex;
+}
