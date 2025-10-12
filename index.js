@@ -18,13 +18,16 @@ const totalCostResult = document.getElementById('totalCostResult');
 
 
 
-const ambaganArr = [];
-const spentArr = [];
+const ambaganArr = JSON.parse(localStorage.getItem('ambaganArr')) || [];
+const spentArr = JSON.parse(localStorage.getItem('spentArr')) || [];
 
 let allBudget = 0;
 
 displayAmbagan();
 displayItems();
+showAmount();
+budgetAmount();
+displayTotalCost();
 
 function addInput() {
     //AMBAGAN
@@ -53,6 +56,9 @@ function addInput() {
     displayAmbagan();
     showAmount();
     budgetAmount();
+
+
+    localStorage.setItem('ambaganArr', JSON.stringify(ambaganArr));
 }
 
 function displayAmbagan() {
@@ -67,8 +73,14 @@ function displayAmbagan() {
         <div>₱${amount} </div>
         <div>${date} </div>
         <div class="deleteBtnDiv">
-        <button class="deleteBtn" onclick="ambaganArr.splice(${i}, 1);  displayAmbagan();   showAmount(); budgetAmount(); ">
-        <img src="icons/trash-solid-full.svg" alt="">
+        <button 
+            class="deleteBtn"
+            onclick="ambaganArr.splice(${i}, 1);
+            localStorage.setItem('ambaganArr', JSON.stringify(ambaganArr));
+            displayAmbagan(); 
+            showAmount();
+            budgetAmount(); ">
+            <img src="icons/trash-solid-full.svg" alt="">
         </button>
         </div>
         `;
@@ -84,6 +96,11 @@ function showAmount() {
     }
     allamountResult.innerHTML = `<div class="resultAmount">${allAmount}</div>`;
     allBudget = allAmount;
+    //I dont need to actually put this because when the arrayobject amounts and budget,
+    //automatically updated because the arrayobject is saved in JSON localstorage,
+    //so i just need to "re-display" the function again to get the updated value. If not it will output, 
+    //a zero value when refreshing
+    //localStorage.setItem('allBudget', JSON.stringify(allBudget));
 }
 
 function budgetAmount() {
@@ -93,6 +110,11 @@ function budgetAmount() {
         resultBudget -= itemAmount;
     }
     allBudgetResult.innerHTML = `<div class="resultAmount">${resultBudget}</div>`;
+    //I dont need to actually put this because when the arrayobject amounts and budget,
+    //automatically updated because the arrayobject is saved in JSON localstorage,
+    //so i just need to "re-display" the function again to get the updated value. If not it will output, 
+    //a zero value when refreshing
+    //localStorage.setItem('allBudget', JSON.stringify(resultBudget));
 }
 
 function spentInput() {
@@ -124,6 +146,7 @@ function spentInput() {
     displayItems();
     budgetAmount();
     displayTotalCost();
+    localStorage.setItem('spentArr', JSON.stringify(spentArr));
 }
 
 function displayItems() {
@@ -138,8 +161,14 @@ function displayItems() {
         <div>₱${itemAmount} </div>
         <div>${itemDate} </div>
         <div class="deleteBtnDiv">
-        <button class="deleteBtn" onclick="spentArr.splice(${i}, 1);  displayItems(); budgetAmount(); displayTotalCost(); ">
-        <img src="icons/trash-solid-full.svg" alt="">
+        <button 
+            class="deleteBtn" 
+            onclick="spentArr.splice(${i}, 1); 
+            localStorage.setItem('spentArr', JSON.stringify(spentArr));
+            displayItems(); 
+            budgetAmount(); 
+            displayTotalCost();">
+            <img src="icons/trash-solid-full.svg" alt="">
         </button>
         </div>  
         `;
@@ -155,6 +184,11 @@ function displayTotalCost() {
         costResult += totalAmount;
     }
     totalCostResult.innerHTML = `<div class="resultAmount">${costResult}</div>`;
+    //I dont need to actually put this because when the arrayobject amounts and budget,
+    //automatically updated because the arrayobject is saved in JSON localstorage,
+    //so i just need to "re-display" the function again to get the updated value. If not it will output, 
+    //a zero value when refreshing
+    //localStorage.setItem('costResult', JSON.stringify(costResult));
 }
 
 addButtonJS.onclick = function () {
