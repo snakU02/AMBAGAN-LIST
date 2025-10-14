@@ -1,9 +1,13 @@
+html,
 body {
     background-color: #fffffe;
     font-family: arial;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+
+    /* prevents horizontal scroll 
+    this is use to remove the spaces in my title container
+    */
+    overflow-x: hidden;
 }
 
 .container {
@@ -30,9 +34,6 @@ h1 p {
     align-items: center;
     background-color: #272343;
     margin-bottom: 20px;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
     height: 80px;
     width: 100%;
 }
