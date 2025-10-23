@@ -9,56 +9,46 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>PROTOTYPE AMBAGAN - <p>ROBOT ASSISTANT</p>
-            </h1>
+    <div class="header">
+        <div class="title">PROTOTYPE AMBAGAN - <span style="color:#ffd803;">ROBOT ASSISTANT</span>
         </div>
-        <div class="container-border-list">
-            <div class="ambagan-border">
+    </div>
+    <div class="container-border-list">
+        <div class="ambagan-border">
+            <div class="second-container">
+                <h2>TOTAL CONTRIBUTION: ₱</h2>
+                <div id="allamountResult"></div>
+            </div>
+            <div class="grid-list">
+                <input id="inputName" type="text" placeholder="Name" class="input">
+                <input id="inputAmount" type="number" placeholder="Amount" class="input">
+                <input id="inputDate" type="date" class="input">
+                <button id="addButtonJS" class="addBtn"><img src="icons/001-add.png"
+                        style="height: 25px; padding-top: 5px;"></button>
+            </div>
+            <div id="resultsAmbagan" class="resultsAmbagan"></div>
+        </div>
+        <div class="budget-border">
+            <div class="budgetAndTotalCost">
                 <div class="second-container">
-                    <h2>TOTAL CONTRIBUTION: ₱</h2>
-                    <div id="allamountResult"></div>
+                    <h2>BUDGET: ₱</h2>
+                    <div id="allBudgetResult"></div>
                 </div>
-                <div class="grid-list">
-                    <input id="inputName" type="text" placeholder="Name" class="input">
-                    <input id="inputAmount" type="number" placeholder="Amount" class="input">
-                    <input id="inputDate" type="date" class="input">
-                    <button id="addButtonJS" class="addBtn"><img src="icons/001-add.png"
-                            style="height: 25px; padding-top: 5px;"></button>
+                <div class="second-container">
+                    <h2>TOTAL COST: ₱</h2>
+                    <div id="totalCostResult"></div>
                 </div>
-                <div id="resultsAmbagan" class="resultsAmbagan"></div>
             </div>
-            <div class="budget-border">
-                <div class="budgetAndTotalCost">
-                    <div class="second-container">
-                        <h2>BUDGET: ₱</h2>
-                        <div id="allBudgetResult"></div>
-                    </div>
-                    <div class="second-container">
-                        <h2>TOTAL COST: ₱</h2>
-                        <div id="totalCostResult"></div>
-                    </div>
-                </div>
 
-                <div class="grid-list">
-                    <input id="inputItemName" type="text" placeholder="Expenses Item" class="input">
-                    <input id="inputItemAmount" type="number" placeholder="Expenses Price" class="input">
-                    <input id="inputItemDate" type="date" class="input">
-                    <button id="itemBoughtButton" class="addBtn"><img src="icons/002-add-to-cart.png"
-                            style="height: 25px; padding-top: 2px;"></button>
-                </div>
-                <div id="resultsSpent" class="resultsAmbagan"></div>
+            <div class="grid-list">
+                <input id="inputItemName" type="text" placeholder="Expenses Item" class="input">
+                <input id="inputItemAmount" type="number" placeholder="Expenses Price" class="input">
+                <input id="inputItemDate" type="date" class="input">
+                <button id="itemBoughtButton" class="addBtn"><img src="icons/002-add-to-cart.png"
+                        style="height: 25px; padding-top: 2px;"></button>
             </div>
+            <div id="resultsSpent" class="resultsAmbagan"></div>
         </div>
-
-
-
-
-
-
-
-
     </div>
 
 

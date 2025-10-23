@@ -3,48 +3,51 @@ body {
     background-color: #fffffe;
     font-family: arial;
     margin: 0;
-
-    /* prevents horizontal scroll 
-    this is use to remove the spaces in my title container
-    */
-    overflow-x: hidden;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-}
-
-h1 {
-    display: inline-block;
-    margin: 0;
-}
-
-h1 p {
-    display: inline-block;
-    color: #ffd803;
-    margin: 0;
-}
-
-.title {
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #272343;
-    margin-bottom: 20px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     height: 80px;
-    width: 100%;
+}
+
+.title {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
 }
 
 .container-border-list {
     display: flex;
-    column-gap: 60px;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
 }
 
 .ambagan-border {
-    margin-left: 10px;
     align-self: flex-start;
     /*//align-self: flex-start; - This only works if the parent container has display: flex; 
     //In short use this to work containers independently.
@@ -78,6 +81,7 @@ h1 p {
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.18);
     width: 600px;
     border-radius: 5px;
+    align-self: center;
 }
 
 .grid-list {
