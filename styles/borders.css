@@ -203,9 +203,13 @@ h2 {
         grid-template-columns: 120px 110px 110px 1fr;
     }
 
+    .second-container div {
+        width: 50px;
+
+    }
 
     h2 {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .resultAmount {
@@ -215,6 +219,45 @@ h2 {
     .resultsAmbagan {
         display: grid;
         grid-template-columns: 115px 110px 100px 1fr;
+    }
+
+    .deleteBtn {
+        margin-left: 0;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .ambagan-border,
+    .budget-border,
+    .second-container,
+    .grid-list {
+        width: 340px;
+    }
+
+    .grid-list {
+        display: grid;
+        grid-template-columns: 99px 99px 99px 1fr;
+    }
+
+    .second-container div {
+        width: 50px;
+
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .resultAmount {
+        font-size: 17px;
+    }
+
+    .resultsAmbagan {
+        display: grid;
+        grid-template-columns: 95px 95px 85px 1fr;
     }
 
     .deleteBtn {
