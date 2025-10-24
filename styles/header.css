@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272343;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+}
+
+.title {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+}
+
+
+@media (max-width: 866px) {
+    .title {
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 760px) {
+    .title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 432px) {
+    .title {
+        font-size: 18px;
+    }
+}
